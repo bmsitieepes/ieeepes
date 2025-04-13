@@ -1,0 +1,104 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap');
+
+/* Mission section styles */
+#mission {
+  background-color: white !important;
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main heading */
+#mission h2 {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+/* Mission grid */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Mission cards */
+.mission-card {
+  padding: 2rem;
+}
+
+/* Mission card content */
+.mission-card h3 {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 1.75rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.mission-card p {
+  font-family: "Inter Tight", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #4b5563;
+  letter-spacing: -0.01em;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .mission-grid {
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  #mission h2 {
+    font-size: 3rem;
+  }
+
+  .mission-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  #mission h2 {
+    font-size: 2.5rem;
+  }
+
+  .mission-card {
+    padding: 1.5rem;
+  }
+
+  .mission-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .mission-card p {
+    font-size: 1rem;
+  }
+}
