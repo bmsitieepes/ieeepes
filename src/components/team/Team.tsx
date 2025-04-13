@@ -1,7 +1,7 @@
 // src/components/team/Team.tsx
 import React, { useState } from 'react';
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import '../css/team.css';
+import '../../css/team.css';
 
 interface TeamMember {
   name: string;
