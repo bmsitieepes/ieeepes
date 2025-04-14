@@ -1,6 +1,6 @@
 // WhyJoin.tsx (remains the same)
 
-import '../css/whyjoin.css';
+import '../../css/whyJoin.css';
 
 const WhyJoin = () => {
   const benefits = [
