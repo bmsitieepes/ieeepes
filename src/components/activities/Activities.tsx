@@ -1,5 +1,5 @@
 // src/components/activities/Activities.tsx
-import React from 'react';
+
 import ActivityCard from './ActivityCard';
 import '../../css/activities.css';
 

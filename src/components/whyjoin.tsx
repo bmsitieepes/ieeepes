@@ -1,5 +1,5 @@
 // WhyJoin.tsx (remains the same)
-import React from 'react';
+
 import '../css/whyjoin.css';
 
 const WhyJoin = () => {

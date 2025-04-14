@@ -1,5 +1,5 @@
 // App.tsx
-import React from 'react';
+
 import Vision from './components/vision';
 import WhyJoin from './components/whyjoin';
 import Events from './components/events/events';  // Updated path
