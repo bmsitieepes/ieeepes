@@ -63,7 +63,7 @@ const Team: React.FC = () => {
   React.useEffect(() => {
     const checkScreen = () => {
       if (window.innerWidth <= 768) {
-        setMembersPerPage(2);
+        setMembersPerPage(1);
       } else {
         setMembersPerPage(3);
       }
