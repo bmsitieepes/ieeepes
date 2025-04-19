@@ -13,7 +13,7 @@ interface TeamMember {
 
 const Team: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const membersPerPage = 2; // Change to 3 if you want 3 per page
+  const [membersPerPage, setMembersPerPage] = useState(3); // Default 3 for desktop
   const teamMembers: TeamMember[] = [
     {
       name: "Aditya Raj",
@@ -58,6 +58,20 @@ const Team: React.FC = () => {
       email: "yash.raj@example.com"
     }
   ];
+
+  // Responsive members per page
+  React.useEffect(() => {
+    const checkScreen = () => {
+      if (window.innerWidth <= 768) {
+        setMembersPerPage(2);
+      } else {
+        setMembersPerPage(3);
+      }
+    };
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
 
   const totalPages = Math.ceil(teamMembers.length / membersPerPage);
   const handleDotClick = (pageIndex: number) => {
