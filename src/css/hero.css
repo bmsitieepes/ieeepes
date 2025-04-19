@@ -7,13 +7,45 @@
     text-align: center;
     padding: 0 2rem;
     background: linear-gradient(135deg, 
-      #6366F1 0%,     /* Purple */
-      #7B1FA2 30%,    /* Deep Purple */
-      #9C27B0 60%,    /* Brighter Purple */
-      #E91E63 100%    /* Pink/Red */
+      #14532d 0%,      /* Deep Forest Green */
+      #1e7f5c 35%,     /* Muted Teal Green */
+      #b8c26b 70%,     /* Soft Olive/Yellow-Green */
+      #aee571 100%     /* Muted Light Green */
     );
     position: relative;
     overflow: hidden;
+  }
+
+  .scroll-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    z-index: 2;
+    cursor: pointer;
+    background: rgba(20, 83, 45, 0.05);
+    border-radius: 50%;
+    padding: 6px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 6px 24px rgba(20, 83, 45, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .scroll-arrow:hover {
+    background: rgba(20, 83, 45, 0.14);
+    box-shadow: 0 8px 32px rgba(20, 83, 45, 0.18);
+  }
+
+  @media (max-width: 768px) {
+    .scroll-arrow {
+      bottom: 16px;
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
   }
   
   .hero::before {

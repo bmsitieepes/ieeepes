@@ -26,7 +26,7 @@ const Activities = () => {
     {
       title: "Networking Events",
       description: "Connect with professionals and peers in the industry.",
-      icon: "🤝",
+      icon: "🫱🏻‍🫲🏼",
       link: "#"
     }
   ];

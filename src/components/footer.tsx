@@ -1,7 +1,7 @@
 // src/components/Footer.tsx
 import React from 'react';
 import '../css/footer.css';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import {  FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
@@ -13,16 +13,14 @@ const Footer: React.FC = () => {
             Empowering Innovation in Power and Energy Technology
           </p>
           <div className="social-icons">
-            <a href="#" className="social-link" aria-label="Facebook">
-              <FaFacebook />
-            </a>
+           
             <a href="#" className="social-link" aria-label="Twitter">
               <FaTwitter />
             </a>
-            <a href="#" className="social-link" aria-label="Instagram">
+            <a href="https://www.instagram.com/ieee.pes_bmsit?igsh=Zm5ob2Z4dnQxempi" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a href="#" className="social-link" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/ieee-pes-bmsit/" className="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
           </div>
@@ -40,9 +38,12 @@ const Footer: React.FC = () => {
 
         <div className="footer-section">
           <h3 className="footer-title">Contact Us</h3>
-          <p className="footer-text inter-tight">Email: pes@ieee.org</p>
-          <p className="footer-text inter-tight">Location: Engineering Building</p>
-          <p className="footer-text inter-tight">University Campus</p>
+          <p className="footer-text inter-tight">Email: powerandenergysociety@gmail.com</p>        
+<p className="footer-text inter-tight">Address : BMSIT&M,<br/>
+                         Doddaballapur Main Road,<br/>
+                        Avalahalli, Yelahanka,<br/>
+                         Bengaluru - 560119.</p>
+          
         </div>
       </div>
       

@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&display=swap');
 
 .why-join {
-    background: white;
+    background: #f8f9fe;
     padding: 80px 0;
     position: relative;
     overflow: hidden;
@@ -66,9 +66,9 @@
 
 /* Card heading styling */
 .benefit-title {
-    font-family: "Unbounded", sans-serif;
+    font-family: 'Sharp Grotesk Book 25 Regular', "Unbounded", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
     font-size: 24px;
     margin-bottom: 12px;

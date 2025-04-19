@@ -91,9 +91,9 @@
 
 /* Card content */
 .vision-card h3 {
-  font-family: "Unbounded", sans-serif;
+  font-family: 'Sharp Grotesk Book 25 Regular', "Unbounded", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.25rem;
   color: #000000;
   margin-bottom: 1rem;

@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap');
 
 #about {
-  background-color: white !important;
+  background-color: #f8f9fe !important;
   width: 100%;
   padding: 4rem 0;
 }
@@ -65,9 +65,9 @@
 
 /* Feature card content */
 .feature-card h3 {
-  font-family: "Unbounded", sans-serif;
+  font-family: 'Sharp Grotesk Book 25 Regular', "Unbounded", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.75rem;
   color: #000000;
   margin-bottom: 1rem;

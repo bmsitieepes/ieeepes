@@ -12,7 +12,7 @@ const WhyJoin = () => {
     {
       title: "Networking",
       description: "Connect with industry professionals and fellow students in the power and energy sector",
-      icon: "🤝"
+      icon: "🫱🏻‍🫲🏼"
     },
     {
       title: "Leadership",

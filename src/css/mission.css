@@ -4,7 +4,7 @@
 
 /* Mission section styles */
 #mission {
-  background-color: white !important;
+  background-color: #f8f9fe !important;
   width: 100%;
   padding: 4rem 0;
 }
@@ -43,9 +43,9 @@
 
 /* Mission card content */
 .mission-card h3 {
-  font-family: "Unbounded", sans-serif;
+  font-family: 'Sharp Grotesk Book 25 Regular', "Unbounded", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.75rem;
   color: #000000;
   margin-bottom: 1rem;

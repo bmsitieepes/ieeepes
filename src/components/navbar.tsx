@@ -1,34 +1,48 @@
 // src/components/navbar/Navbar.tsx
 import { useEffect, useState } from 'react';
 import '../css/navbar.css';
+import ieeePesLogo from '../assets/images/iee pes logo.png';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('hero');
+  // Debug: log active section whenever it changes
+  useEffect(() => { console.log('Active section:', activeSection); }, [activeSection]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const navbar = document.querySelector('.navbar');
+      const navbar = document.querySelector('.navbar') as HTMLElement;
       if (window.scrollY > 50) {
         navbar?.classList.add('scrolled');
       } else {
         navbar?.classList.remove('scrolled');
       }
 
-      // Update active section based on scroll position
+      // If at the very top, force hero as active
+      if (window.scrollY === 0) {
+        setActiveSection('hero');
+        return;
+      }
+
+      // Find the section closest to the top (minus navbar height)
       const sections = document.querySelectorAll('section[id]');
-      const scrollPosition = window.scrollY + 100;
+      const navbarHeight = navbar?.offsetHeight || 0;
+      let activeId = 'hero';
+      let maxVisible = -Infinity;
 
       sections.forEach(section => {
-        const sectionTop = (section as HTMLElement).offsetTop;
-        const sectionHeight = section.clientHeight;
-        const sectionId = section.getAttribute('id') || '';
-
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          setActiveSection(sectionId);
+        const sectionEl = section as HTMLElement;
+        const rect = sectionEl.getBoundingClientRect();
+        const sectionMid = rect.top + rect.height / 2;
+        // The closer the midpoint is to the navbar, the more 'active' it is
+        if (sectionMid - navbarHeight < window.innerHeight / 2 && sectionMid > maxVisible) {
+          maxVisible = sectionMid;
+          activeId = section.getAttribute('id') || '';
         }
       });
+      setActiveSection(activeId);
     };
+
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -78,8 +92,14 @@ const Navbar = () => {
             href="#hero"
             className="brand-text"
             onClick={(e) => scrollToSection(e, 'hero')}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textDecoration: 'none' }}
           >
-            IEEE PES
+            <img 
+              src={ieeePesLogo} 
+              alt="IEEE PES Logo" 
+              className="navbar-logo" 
+              style={{ width: 'auto', background: 'transparent' }}
+            />
           </a>
         </div>
 
@@ -93,13 +113,14 @@ const Navbar = () => {
           <span></span>
         </button>
 
-        <div className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+        <div className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`} style={{listStyle: 'none', margin: 0, padding: 0}}>
           {navItems.map(({ id, label }) => (
             <a
               key={id}
               href={`#${id}`}
               className={`nav-link ${activeSection === id ? 'active' : ''}`}
               onClick={(e) => scrollToSection(e, id)}
+              style={{listStyle: 'none'}}
             >
               {label}
             </a>
