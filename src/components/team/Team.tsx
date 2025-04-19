@@ -61,16 +61,18 @@ const Team: React.FC = () => {
 
   // Responsive members per page
   React.useEffect(() => {
-    const checkScreen = () => {
-      if (window.innerWidth <= 768) {
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const handleChange = () => {
+      if (mediaQuery.matches) {
         setMembersPerPage(1);
       } else {
         setMembersPerPage(3);
       }
+      setCurrentPage(0); // Always reset to first page on layout change
     };
-    checkScreen();
-    window.addEventListener('resize', checkScreen);
-    return () => window.removeEventListener('resize', checkScreen);
+    handleChange();
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   const totalPages = Math.ceil(teamMembers.length / membersPerPage);
