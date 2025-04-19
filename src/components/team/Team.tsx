@@ -14,6 +14,7 @@ interface TeamMember {
 const Team: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [membersPerPage, setMembersPerPage] = useState(3); // Default 3 for desktop
+  const [isClient, setIsClient] = useState(false); // Avoid SSR mismatch
   const teamMembers: TeamMember[] = [
     {
       name: "Aditya Raj",
@@ -61,6 +62,7 @@ const Team: React.FC = () => {
 
   // Responsive members per page
   React.useEffect(() => {
+    setIsClient(true);
     const mediaQuery = window.matchMedia('(max-width: 768px)');
     const handleChange = () => {
       if (mediaQuery.matches) {
@@ -84,6 +86,8 @@ const Team: React.FC = () => {
   const startIdx = currentPage * membersPerPage;
   const endIdx = startIdx + membersPerPage;
   const visibleMembers = teamMembers.slice(startIdx, endIdx);
+
+  if (!isClient) return null; // Avoid SSR hydration mismatch
 
   return (
     <section id="team" className="team-section">
