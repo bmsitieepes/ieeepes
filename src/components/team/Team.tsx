@@ -12,6 +12,8 @@ interface TeamMember {
 }
 
 const Team: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const membersPerPage = 2; // Change to 3 if you want 3 per page
   const teamMembers: TeamMember[] = [
     {
       name: "Aditya Raj",
@@ -57,48 +59,72 @@ const Team: React.FC = () => {
     }
   ];
 
+  const totalPages = Math.ceil(teamMembers.length / membersPerPage);
+  const handleDotClick = (pageIndex: number) => {
+    setCurrentPage(pageIndex);
+  };
+
+  // Calculate which members to show on this page
+  const startIdx = currentPage * membersPerPage;
+  const endIdx = startIdx + membersPerPage;
+  const visibleMembers = teamMembers.slice(startIdx, endIdx);
+
   return (
     <section id="team" className="team-section">
       <div className="container">
         <h2 className="section-title">Our Team</h2>
-        <div className="team-grid">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="team-card">
-              <div className="member-content">
-                <div className="member-image-container">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="member-image"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = '/assets/team/placeholder.jpg';
-                    }}
-                  />
-                </div>
-                <div className="member-info">
-                  <h3 className="member-name">{member.name.toUpperCase()}</h3>
-                  <p className="member-role inter-tight">{member.role}</p>
-                  <div className="member-socials">
-                    <a 
-                      href={member.linkedin} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      aria-label={`${member.name}'s LinkedIn`}
-                    >
-                      <FaLinkedin />
-                    </a>
-                    <a 
-                      href={`mailto:${member.email}`}
-                      aria-label={`Email ${member.name}`}
-                    >
-                      <FaEnvelope />
-                    </a>
+        <div className="team-slider">
+          <div className="team-track-wrapper">
+            <div className="team-track">
+              {visibleMembers.map((member, index) => (
+                <div key={index} className="team-card">
+                  <div className="member-content">
+                    <div className="member-image-container">
+                      <img 
+                        src={member.image} 
+                        alt={member.name} 
+                        className="member-image"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = '/assets/team/placeholder.jpg';
+                        }}
+                      />
+                    </div>
+                    <div className="member-info">
+                      <h3 className="member-name">{member.name.toUpperCase()}</h3>
+                      <p className="member-role inter-tight">{member.role}</p>
+                      <div className="member-socials">
+                        <a 
+                          href={member.linkedin} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          aria-label={`${member.name}'s LinkedIn`}
+                        >
+                          <FaLinkedin />
+                        </a>
+                        <a 
+                          href={`mailto:${member.email}`}
+                          aria-label={`Email ${member.name}`}
+                        >
+                          <FaEnvelope />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+          <div className="pagination">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <button
+                key={index}
+                className={`page-dot ${currentPage === index ? 'active' : ''}`}
+                onClick={() => handleDotClick(index)}
+                aria-label={`Go to page ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
