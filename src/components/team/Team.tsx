@@ -17,14 +17,14 @@ const Team: React.FC = () => {
   const [isClient, setIsClient] = useState(false); // Avoid SSR mismatch
   const teamMembers: TeamMember[] = [
     {
-      name: "Aditya Raj",
+      name: "Rohan lendwani ",
       role: "Chair",
       image: "/assets/team/aditya.jpg",
       linkedin: "https://www.linkedin.com/in/aditya-raj",
       email: "aditya.raj@example.com"
     },
     {
-      name: "Anshuman Mishra",
+      name: "Amit Mittal",
       role: "Vice Chair",
       image: "/assets/team/anshuman.jpg",
       linkedin: "https://www.linkedin.com/in/anshuman-mishra",
@@ -45,14 +45,14 @@ const Team: React.FC = () => {
       email: "aryan.raj@example.com"
     },
     {
-      name: "Shubham Kumar",
+      name: "john pork",
       role: "Technical Head",
       image: "/assets/team/shubham.jpg",
       linkedin: "https://www.linkedin.com/in/shubham-kumar",
       email: "shubham.kumar@example.com"
     },
     {
-      name: "Yash Raj",
+      name: "Nithin ",
       role: "Event Coordinator",
       image: "/assets/team/yash.jpg",
       linkedin: "https://www.linkedin.com/in/yash-raj",

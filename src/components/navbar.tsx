@@ -1,7 +1,7 @@
 // src/components/navbar/Navbar.tsx
 import { useEffect, useState } from 'react';
 import '../css/navbar.css';
-import ieeePesLogo from '../assets/images/iee pes logo.png';
+import ieeePesLogo from '../assets/images/nobackground.png';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -74,20 +74,20 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { id: 'hero', label: 'Home' },
+    { id: 'HCero', label: 'Home' },
     { id: 'about', label: 'About' },
-    { id: 'why-join', label: 'Why Join' },
-    { id: 'mission', label: 'Mission' },
-    { id: 'vision', label: 'Vision' },
-    { id: 'events', label: 'Events' },
-    { id: 'activities', label: 'Activities' },
-    { id: 'team', label: 'Team' }
+    { id: 'Mission', label: 'Mission' },
+    { id: 'Vision', label: 'Vision' },
+    { id: 'Why Join', label:'Why Join' },
+    { id: 'Activities', label: 'Activities' },
+    { id: 'Team', label: 'Team' }
   ];
 
   return (
     <nav className="navbar">
       <div className="nav-container">
         <div className="navbar-brand">
+          
           <a 
             href="#hero"
             className="brand-text"

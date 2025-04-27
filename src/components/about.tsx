@@ -7,31 +7,12 @@ const About: React.FC = () => {
       <div className="container">
         <h2 className="unbounded-bold">About Us</h2>
         <p className="about-description">
-          The IEEE Power & Energy Society (PES) is a worldwide, non-profit association of 
-          more than 40,000 industry professionals, academics, and students. Our student 
-          chapter is dedicated to advancing technology and fostering innovation in power and energy.
+        IEEE PES (Power & Energy Society) BMSIT is a student chapter dedicated to fostering innovation, collaboration, and education in the field of power and energy systems. Through workshops, seminars, hands-on projects, and networking events, we aim to empower future engineers in the field of power and energy systems
         </p>
-        
-        <div className="features-grid">
-          <div className="feature-card">
-            <h3>Research Excellence</h3>
-            <p>Promoting scientific and engineering knowledge in power and energy</p>
-          </div>
-
-          <div className="feature-card">
-            <h3>Student Development</h3>
-            <p>Supporting student development through workshops and events</p>
-          </div>
-
-          <div className="feature-card">
-            <h3>Industry Network</h3>
-            <p>Creating networking opportunities with industry professionals</p>
-          </div>
-
-          <div className="feature-card">
-            <h3>Innovation</h3>
-            <p>Fostering innovation in sustainable energy solutions</p>
-          </div>
+        <div className="about-learn-more">
+          <a href="#" className="about-learn-link">
+            Learn More <span className="about-learn-arrow">&rarr;</span>
+          </a>
         </div>
       </div>
     </section>

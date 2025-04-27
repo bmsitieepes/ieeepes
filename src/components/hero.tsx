@@ -1,6 +1,7 @@
 // src/components/hero.tsx
 import '../css/hero.css';
 
+
 const Hero = () => {
   return (
     <section className="hero" id="hero">

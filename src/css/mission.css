@@ -5,6 +5,8 @@
 /* Mission section styles */
 #mission {
   background-color: #f8f9fe !important;
+
+  background-color: #f8f9fe !important;
   width: 100%;
   padding: 4rem 0;
 }
@@ -26,6 +28,27 @@
   margin-bottom: 3rem;
   letter-spacing: -0.02em;
 }
+
+.mission-description {
+  font-family: "Inter Tight", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 410;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #000000;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 1rem auto;
+  letter-spacing: -0.02em;
+  background: none;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  position: static;
+  z-index: auto;
+}
+
 
 /* Mission grid */
 .mission-grid {
@@ -55,7 +78,7 @@
 .mission-card p {
   font-family: "Inter Tight", sans-serif !important;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 410;
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.5;

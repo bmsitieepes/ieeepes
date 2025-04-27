@@ -1,0 +1,9 @@
+@import url('https://db.onlinewebfonts.com/c/91d3afe918937141b6ae8e43b1005bc8?family=Sharp+Grotesk+Book+25+Regular');
+
+/* Font-face fallback for local use */
+@font-face {
+  font-family: 'Sharp Grotesk Book 25 Regular';
+  src: url('https://db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

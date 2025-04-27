@@ -38,8 +38,14 @@ const WhyJoin = () => {
               </div>
               <h3 className="benefit-title">{benefit.title}</h3>
               <p className="benefit-description">{benefit.description}</p>
+
             </div>
           ))}
+        </div>
+        <div className="why-join-learn-more">
+          <a href="https://ieee-pes.org/" className="why-join-learn-link" target="_blank" rel="noopener noreferrer">
+            Learn More <span className="why-join-learn-arrow">&rarr;</span>
+          </a>
         </div>
       </div>
     </section>
