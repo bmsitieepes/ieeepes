@@ -1,7 +1,7 @@
 // src/components/navbar/Navbar.tsx
 import { useEffect, useState } from 'react';
 import '../css/navbar.css';
-import ieeePesLogo from '../assets/images/nobackground.png';
+import mainLogo from '../../public/bmslogo-imageonline.co-merged-removebg-preview.png';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -74,7 +74,7 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { id: 'HCero', label: 'Home' },
+    { id: 'Hero', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'Mission', label: 'Mission' },
     { id: 'Vision', label: 'Vision' },
@@ -95,8 +95,8 @@ const Navbar = () => {
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textDecoration: 'none' }}
           >
             <img 
-              src={ieeePesLogo} 
-              alt="IEEE PES Logo" 
+              src={mainLogo} 
+              alt="Main Logo" 
               className="navbar-logo" 
               style={{ width: 'auto', background: 'transparent' }}
             />

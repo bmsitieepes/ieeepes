@@ -10,7 +10,7 @@ const About: React.FC = () => {
         IEEE PES (Power & Energy Society) BMSIT is a student chapter dedicated to fostering innovation, collaboration, and education in the field of power and energy systems. Through workshops, seminars, hands-on projects, and networking events, we aim to empower future engineers in the field of power and energy systems
         </p>
         <div className="about-learn-more">
-          <a href="#" className="about-learn-link">
+          <a href="/ieeepes/learn-more.html" className="about-learn-link">
             Learn More <span className="about-learn-arrow">&rarr;</span>
           </a>
         </div>

@@ -1,6 +1,6 @@
 // src/components/team/Team.tsx
 import React, { useState } from 'react';
-import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin , FaEnvelope, FaInstagram } from 'react-icons/fa';
 import '../../css/team.css';
 
 interface TeamMember {
@@ -8,7 +8,7 @@ interface TeamMember {
   role: string;
   image: string;
   linkedin: string;
-  email: string;
+  Instagram: string;
 }
 
 const Team: React.FC = () => {
@@ -21,42 +21,59 @@ const Team: React.FC = () => {
       role: "Chair",
       image: "/assets/team/aditya.jpg",
       linkedin: "https://www.linkedin.com/in/aditya-raj",
-      email: "aditya.raj@example.com"
+      Instagram: "aditya.raj@example.com"
     },
     {
-      name: "Amit Mittal",
+      name: "GHANASHYAM BL",
       role: "Vice Chair",
-      image: "/assets/team/anshuman.jpg",
-      linkedin: "https://www.linkedin.com/in/anshuman-mishra",
-      email: "anshuman.mishra@example.com"
+      image: "src/assets/images/ghanshyam.jpg",
+      linkedin: "https://linkedin.com/in/ghanashyam-bl-666253279",
+      Instagram: "https://www.instagram.com/ghanashyam_bl/"
     },
     {
-      name: "Anurag Gupta",
+      name: "MEHAK R SHASHIDAR",
       role: "Secretary",
-      image: "/assets/team/anurag.jpg",
-      linkedin: "https://www.linkedin.com/in/anurag-gupta",
-      email: "anurag.gupta@example.com"
+      image: "src/assets/images/mehek.jpg",
+      linkedin: "#",
+      Instagram: "#"
     },
+    {
+      name: "MANU ATHREYA",
+      role: "Joint Secretary",
+      image: "src/assets/images/manu.jpg",
+      linkedin: "https://www.linkedin.com/in/manu-athreya-g-604727363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      Instagram: "https://www.instagram.com/iconic_wizard?igsh=YXhiMTEzamluajk0"
+    },
+    {
+      name: "SHREYAS M N",
+      role: "R&D Head",
+      image: "src/assets/images/DP - SHREYAS M N EE-2023-26.jpg",
+      linkedin: "https://www.linkedin.com/in/shreyas-mn-/",
+      Instagram: "https://www.instagram.com/shreyas_m.n?igsh=eXd4cndhaWhnamZh"
+    },
+
+
+  
     {
       name: "Aryan Raj",
       role: "Treasurer",
       image: "/assets/team/aryan.jpg",
       linkedin: "https://www.linkedin.com/in/aryan-raj",
-      email: "aryan.raj@example.com"
+      Instagram: "aryan.raj@example.cosm"
     },
     {
       name: "john pork",
       role: "Technical Head",
       image: "/assets/team/shubham.jpg",
       linkedin: "https://www.linkedin.com/in/shubham-kumar",
-      email: "shubham.kumar@example.com"
+      Instagram: "shubham.kumar@example.com"
     },
     {
       name: "Nithin ",
       role: "Event Coordinator",
       image: "/assets/team/yash.jpg",
       linkedin: "https://www.linkedin.com/in/yash-raj",
-      email: "yash.raj@example.com"
+      Instagram: "yash.raj@example.com"
     }
   ];
 
@@ -123,7 +140,7 @@ const Team: React.FC = () => {
                           <FaLinkedin />
                         </a>
                         <a 
-                          href={`mailto:${member.email}`}
+                          href={`mailto:${member.Instagram}`}
                           aria-label={`Email ${member.name}`}
                         >
                           <FaEnvelope />

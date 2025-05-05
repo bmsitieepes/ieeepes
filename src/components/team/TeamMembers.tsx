@@ -21,7 +21,7 @@ const TeamMembers = () => {
     {
       name: "Emily Rodriguez",
       role: "Vice Chair",
-      image: "/assets/images/team/vice-chair.jpg",
+      image: "src/assets/images/ghanshyam.jpg",
       linkedin: "https://linkedin.com",
       email: "emily.rodriguez@ieee.org"
     },
