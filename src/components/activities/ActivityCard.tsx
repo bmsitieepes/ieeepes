@@ -5,14 +5,12 @@ interface ActivityCardProps {
   title: string;
   description: string;
   icon: string;
-  link: string;
 }
 
 const ActivityCard: React.FC<ActivityCardProps> = ({
   title,
   description,
-  icon,
-  link
+  icon
 }) => {
   return (
     <div className="activity-card">
