@@ -109,6 +109,16 @@
   .btn-primary {
     background: white;
     color: #6366F1;
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+  .btn-primary:visited,
+  .btn-primary:active,
+  .btn-primary:focus,
+  .btn-primary:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: #6366F1;
   }
   
   .btn-secondary {
@@ -116,6 +126,17 @@
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+  .btn-secondary:visited,
+  .btn-secondary:active,
+  .btn-secondary:focus,
+  .btn-secondary:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: white;
+    outline: none;
   }
   
   .btn:hover {

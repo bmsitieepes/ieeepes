@@ -14,9 +14,7 @@ const Footer: React.FC = () => {
           </p>
           <div className="social-icons">
            
-            <a href="#" className="social-link" aria-label="Twitter">
-              <FaTwitter />
-            </a>
+            
             <a href="https://www.instagram.com/ieee.pes_bmsit?igsh=Zm5ob2Z4dnQxempi" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
@@ -29,10 +27,10 @@ const Footer: React.FC = () => {
         <div className="footer-section">
           <h3 className="footer-title">Quick Links</h3>
           <ul className="footer-links">
-            <li><a href="/about" className="inter-tight">About Us</a></li>
-            <li><a href="/events" className="inter-tight">Events</a></li>
-            <li><a href="/activities" className="inter-tight">Activities</a></li>
-            <li><a href="/team" className="inter-tight">Team</a></li>
+            
+            <li><a href="/ieeepes/upcoming-events.html" className="inter-tight">Events</a></li>
+            <li><a href="/ieeepes/learn-more.html" className="inter-tight">Activities</a></li>
+            
           </ul>
         </div>
 

@@ -23,7 +23,7 @@ const Hero = () => {
           </p>
           <div className="hero-buttons">
             <a className="btn btn-primary" href="/ieeepes/upcoming-events.html">Upcoming Events</a>
-            <button className="btn btn-secondary">Join Us</button>
+            <a className="btn btn-primary" href="https://www.ieee.org/membership/join/more-visibility.html" target="_blank" rel="noopener noreferrer">Join Us</a>
           </div>
         </div>
         <div className="scroll-arrow" onClick={() => {

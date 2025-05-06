@@ -74,13 +74,10 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { id: 'Hero', label: 'Home' },
+    { id: 'hero', label: 'Home' },
     { id: 'about', label: 'About' },
-    { id: 'Mission', label: 'Mission' },
-    { id: 'Vision', label: 'Vision' },
-    { id: 'Why Join', label:'Why Join' },
-    { id: 'Activities', label: 'Activities' },
-    { id: 'Team', label: 'Team' }
+    { id: 'activities', label: 'Activities' },
+    { id: 'team', label: 'Team' }
   ];
 
   return (
