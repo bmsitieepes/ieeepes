@@ -26,28 +26,28 @@ const Team: React.FC = () => {
     {
       name: "GHANASHYAM BL",
       role: "Vice Chair",
-      image: "src/assets/images/ghanshyam.jpg",
+      image: "/assets/images/ghanshyam.jpg",
       linkedin: "https://linkedin.com/in/ghanashyam-bl-666253279",
       Instagram: "https://www.instagram.com/ghanashyam_bl/"
     },
     {
       name: "MEHAK R SHASHIDAR",
       role: "Secretary",
-      image: "src/assets/images/mehek.jpg",
+      image: "/assets/images/mehek.jpg",
       linkedin: "https://www.linkedin.com/in/mehak-r-shashidar-41844a362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       Instagram: "https://www.instagram.com/mehak_sheesh?igsh=aTdkN2J3aGlyNG00"
     },
     {
       name: "MANU ATHREYA",
       role: "Joint Secretary",
-      image: "src/assets/images/manu.jpg",
+      image: "/assets/images/manu.jpg",
       linkedin: "https://www.linkedin.com/in/manu-athreya-g-604727363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       Instagram: "https://www.instagram.com/iconic_wizard?igsh=YXhiMTEzamluajk0"
     },
     {
       name: "SHREYAS M N",
       role: "R&D Head",
-      image: "src/assets/images/DP - SHREYAS M N EE-2023-26.jpg",
+      image: "/assets/images/DP - SHREYAS M N EE-2023-26.jpg",
       linkedin: "https://www.linkedin.com/in/shreyas-mn-/",
       Instagram: "https://www.instagram.com/shreyas_m.n?igsh=eXd4cndhaWhnamZh"
     },
