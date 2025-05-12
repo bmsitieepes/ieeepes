@@ -1,7 +1,7 @@
 // src/components/navbar/Navbar.tsx
 import { useEffect, useState } from 'react';
 import '../css/navbar.css';
-import mainLogo from '../../public/bmslogo-imageonline.co-merged-removebg-preview.png';
+import mainLogo from '../../public/Group_2_2x-removebg-preview.png';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('hero');
