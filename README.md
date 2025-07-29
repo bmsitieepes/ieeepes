@@ -8,6 +8,7 @@ Welcome to the official repository for the website of the IEEE PES Student Branc
 ## About The Project
 
 This website serves as a central hub for our members and anyone interested in the Power & Energy Society. Here, you can find information about our student branch, stay updated on our events, get to know our team, and see moments from our past activities. Our goal was to create a clean, responsive, and easy-to-navigate site for everyone.
+
 🔗-https://bmsitieepes.github.io/ieeepes/
 -----
 
