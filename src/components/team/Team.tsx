@@ -17,81 +17,102 @@ const Team: React.FC = () => {
   const [isClient, setIsClient] = useState(false); // Avoid SSR mismatch
   const teamMembers: TeamMember[] = [
     {
-      name: "Rohan lendwani ",
+      name: "Rohan Chandan ",
       role: "Chair",
-      image: "/assets/team/aditya.jpg",
-      linkedin: "https://www.linkedin.com/in/aditya-raj",
-      Instagram: "aditya.raj@example.com"
+      image: "/ieeepes/assets/images/Rohan.jpg",
+      linkedin: "https://www.linkedin.com/in/rohan-c-779126219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      Instagram: "#"
     },
     {
       name: "GHANASHYAM BL",
       role: "Vice Chair",
-      image: "/assets/images/ghanshyam.jpg",
+      image: "/ieeepes/assets/images/ghanshyam.jpg",
       linkedin: "https://linkedin.com/in/ghanashyam-bl-666253279",
       Instagram: "https://www.instagram.com/ghanashyam_bl/"
     },
     {
       name: "MEHAK R SHASHIDAR",
       role: "Secretary",
-      image: "/assets/images/mehek.jpg",
+      image: "/ieeepes/assets/images/mehek.jpg",
       linkedin: "https://www.linkedin.com/in/mehak-r-shashidar-41844a362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       Instagram: "https://www.instagram.com/mehak_sheesh?igsh=aTdkN2J3aGlyNG00"
     },
     {
       name: "MANU ATHREYA",
       role: "Joint Secretary",
-      image: "/assets/images/manu.jpg",
+      image: "/ieeepes/assets/images/manu.jpg",
       linkedin: "https://www.linkedin.com/in/manu-athreya-g-604727363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       Instagram: "https://www.instagram.com/iconic_wizard?igsh=YXhiMTEzamluajk0"
     },
     {
       name: "SHREYAS M N",
       role: "R&D Head",
-      image: "/assets/images/DP - SHREYAS M N EE-2023-26.jpg",
+      image: "/ieeepes/assets/images/DP - SHREYAS M N EE-2023-26.jpg",
       linkedin: "https://www.linkedin.com/in/shreyas-mn-/",
       Instagram: "https://www.instagram.com/shreyas_m.n?igsh=eXd4cndhaWhnamZh"
     },
-
-
   
     {
-      name: "Aryan Raj",
+      name: "Chethan Gowda",
       role: "Treasurer",
-      image: "/assets/team/aryan.jpg",
+      image: "public/assets/images/aryan.jpg",
       linkedin: "https://www.linkedin.com/in/aryan-raj",
       Instagram: "aryan.raj@example.cosm"
     },
-    {
-      name: "john pork",
-      role: "Technical Head",
-      image: "/assets/team/shubham.jpg",
-      linkedin: "https://www.linkedin.com/in/shubham-kumar",
-      Instagram: "shubham.kumar@example.com"
-    },
+    
     {
       name: "Nithin ",
       role: "Event Coordinator",
-      image: "/assets/team/yash.jpg",
-      linkedin: "https://www.linkedin.com/in/yash-raj",
-      Instagram: "yash.raj@example.com"
-    }
+      image: "public/assets/images/nithin.jpg",
+      linkedin: "https://www.linkedin.com/in/nithin-shetty-l-23b483357?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      Instagram: "https://www.instagram.com/__nithin__shetty__?igsh=MW9uMmU3MGd1M2h0dw=="
+    },
+    {
+      name: "Ajay D Bhat",
+      role: "Event Coordinator",
+      image: "public/assets/images/.jpg",
+      linkedin: "https://www.linkedin.com/in/nithin-shetty-l-23b483357?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      Instagram: "https://www.instagram.com/__nithin__shetty__?igsh=MW9uMmU3MGd1M2h0dw=="
+    },
+    
+    {
+      name: "Neha H ",
+      role: "Web Master",
+      image: "public/assets/images/neha.jpg",
+      linkedin: "https://www.linkedin.com/in/neha-h-448409290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      Instagram: "#"
+    },
+    {
+      name: "Suman Gs",
+      role: "Web Master",
+      image: "public/assets/images/suman.jpg",
+      linkedin: "www.linkedin.com/in/sumangs2005",
+      Instagram: "https://www.instagram.com/egggpuffs?igsh=MXJvdGcycmZ2YnJueA=="
+    },
   ];
 
   // Responsive members per page
   React.useEffect(() => {
     setIsClient(true);
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const mediaQueryLg = window.matchMedia('(max-width: 1024px)');
+    const mediaQueryMd = window.matchMedia('(max-width: 768px)');
     const handleChange = () => {
-      if (mediaQuery.matches) {
+      if (mediaQueryMd.matches) {
         setMembersPerPage(1);
+      } else if (mediaQueryLg.matches) {
+        setMembersPerPage(2);
       } else {
         setMembersPerPage(3);
       }
-      setCurrentPage(0); // Always reset to first page on layout change
+      setCurrentPage(0); // Reset to first page on layout change
     };
     handleChange();
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    mediaQueryLg.addEventListener('change', handleChange);
+    mediaQueryMd.addEventListener('change', handleChange);
+    return () => {
+      mediaQueryLg.removeEventListener('change', handleChange);
+      mediaQueryMd.removeEventListener('change', handleChange);
+    };
   }, []);
 
   const totalPages = Math.ceil(teamMembers.length / membersPerPage);
@@ -99,12 +120,12 @@ const Team: React.FC = () => {
     setCurrentPage(pageIndex);
   };
 
-  // Calculate which members to show on this page
+  // Calculating members to show on this page
   const startIdx = currentPage * membersPerPage;
   const endIdx = startIdx + membersPerPage;
   const visibleMembers = teamMembers.slice(startIdx, endIdx);
 
-  if (!isClient) return null; // Avoid SSR hydration mismatch
+  if (!isClient) return null; 
 
   return (
     <section id="team" className="team-section">
@@ -123,7 +144,7 @@ const Team: React.FC = () => {
                         className="member-image"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          target.src = '/assets/team/placeholder.jpg';
+                          target.src = '/assets/images/placeholder.jpg';
                         }}
                       />
                     </div>
