@@ -55,7 +55,7 @@ const Team: React.FC = () => {
     {
       name: "Chethan Gowda",
       role: "Treasurer",
-      image: "public/assets/images/aryan.jpg",
+      image: "/ieeepes/assets/images/aryan.jpg",
       linkedin: "https://www.linkedin.com/in/aryan-raj",
       Instagram: "aryan.raj@example.cosm"
     },
@@ -63,14 +63,14 @@ const Team: React.FC = () => {
     {
       name: "Nithin ",
       role: "Event Coordinator",
-      image: "public/assets/images/nithin.jpg",
+      image: "/ieeepes/assets/images/nithin.jpg",
       linkedin: "https://www.linkedin.com/in/nithin-shetty-l-23b483357?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       Instagram: "https://www.instagram.com/__nithin__shetty__?igsh=MW9uMmU3MGd1M2h0dw=="
     },
     {
       name: "Ajay D Bhat",
       role: "Event Coordinator",
-      image: "public/assets/images/.jpg",
+      image: "/ieeepes/assets/images/.jpg",
       linkedin: "https://www.linkedin.com/in/nithin-shetty-l-23b483357?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       Instagram: "https://www.instagram.com/__nithin__shetty__?igsh=MW9uMmU3MGd1M2h0dw=="
     },
@@ -78,14 +78,14 @@ const Team: React.FC = () => {
     {
       name: "Neha H ",
       role: "Web Master",
-      image: "public/assets/images/neha.jpg",
+      image: "/ieeepes/assets/images/neha.jpg",
       linkedin: "https://www.linkedin.com/in/neha-h-448409290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       Instagram: "#"
     },
     {
       name: "Suman Gs",
       role: "Web Master",
-      image: "public/assets/images/suman.jpg",
+      image: "/ieeepes/assets/images/suman.jpg",
       linkedin: "www.linkedin.com/in/sumangs2005",
       Instagram: "https://www.instagram.com/egggpuffs?igsh=MXJvdGcycmZ2YnJueA=="
     },
