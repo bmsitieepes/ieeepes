@@ -1,13 +1,13 @@
 
 # IEEE PES Website - BMSIT&M Student Branch
 
-Welcome to the official repository for the website of the IEEE PES Student Branch at BMS Institute of Technology and Management. This project is the front door to our community, built to share who we are and what we do.
+This is the official repository for the IEEE PES Student Branch website at BMS Institute of Technology and Management. This frontend project is designed to provide information about the student branch, its events, and its members.
 
 -----
 
 ## About The Project
 
-This website serves as a central hub for our members and anyone interested in the Power & Energy Society. Here, you can find information about our student branch, stay updated on our events, get to know our team, and see moments from our past activities. Our goal was to create a clean, responsive, and easy-to-navigate site for everyone.
+This is the official repository for the source code of the IEEE PES Student Branch website. The project is developed using React.js as a responsive static site. It follows a component-based architecture to manage and display various sections like events, team details, and the photo gallery. The application is optimised for performance and is built for deployment on any static hosting service.
 
 🔗-https://bmsitieepes.github.io/ieeepes/
 -----
