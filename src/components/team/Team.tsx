@@ -142,6 +142,7 @@ const Team: React.FC = () => {
                         src={member.image} 
                         alt={member.name} 
                         className="member-image"
+                       
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           target.src = '/assets/images/placeholder.jpg';
